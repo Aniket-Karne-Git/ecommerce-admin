@@ -2,6 +2,7 @@ import { getGraphRevenue } from "@/actions/get-graph.revenue";
 import { getSalesCount } from "@/actions/get-sales.count";
 import { getStockCount } from "@/actions/get-stock-count";
 import { getTotalRevenue } from "@/actions/get-total-revenue";
+import { Overview } from "@/components/overview";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Heading from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
@@ -64,6 +65,14 @@ const DashboardPage = async ({
             </CardContent>
           </Card>
         </div>
+        <Card className="col-span-4">
+          <CardHeader>
+            <CardTitle>Overview</CardTitle>
+          </CardHeader>
+          <CardContent className="pl-2">
+            <Overview data={graphRevenue} />
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
